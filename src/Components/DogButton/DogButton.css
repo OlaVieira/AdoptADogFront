@@ -8,6 +8,7 @@
     transition: 0.2s;
     margin-bottom: 20px;
     text-transform: uppercase;
+    margin-top: 20px;
 }
 
 .button:hover, .btn:hover {
