@@ -29,7 +29,7 @@ export const DogInfo = () => {
                 <div className="info">
                     <p className="description">{dog.description}</p>
                     <p className="dog-city">Miasto: {dog.city}</p>
-                    <DogButton to="/adopter" text="ADOPTUJ MNIE!"/>
+                    <DogButton to="/adopter/add" text="ADOPTUJ MNIE!"/>
                 </div>
 
             </div>

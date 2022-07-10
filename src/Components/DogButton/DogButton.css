@@ -1,5 +1,6 @@
 .button, .btn {
     font-size: 1.2rem;
+    text-decoration: none;
     border: none;
     border-radius: 5%;
     padding: 5px 10px;

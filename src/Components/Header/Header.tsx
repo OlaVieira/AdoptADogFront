@@ -1,6 +1,7 @@
 import React, {SyntheticEvent, useContext, useState} from 'react';
 import './Header.css';
 import {SearchContext} from "../../contexts/search.context";
+import {Link} from "react-router-dom";
 
 
 export const Header = () => {
@@ -14,10 +15,26 @@ export const Header = () => {
 
     return (
         <header>
-            <div className="title">
-                <strong>Adopt a dog</strong>
-                <i className="fa-solid fa-paw"></i>
-            </div>
+            <Link to="/" className="to-home">
+                <div className="title">
+                    <strong>Adopt a dog</strong>
+                    <i className="fa-solid fa-paw"></i>
+                </div>
+            </Link>
+
+            <Link to="/about" className="to-home">
+                <div className="about">
+                    <strong>O nas</strong>
+                </div>
+            </Link>
+
+            <Link to="/contact" className="to-home">
+                <div className="contact">
+                    <strong>Kontakt</strong>
+                </div>
+            </Link>
+
+
             <form className="search" onSubmit={setSearchLocState}>
                 <input
                     type="text"

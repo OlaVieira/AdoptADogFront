@@ -1,41 +1,75 @@
 import React, {SyntheticEvent, useState} from "react";
 import './FormAdoption.css';
-import {Header} from "../Header/Header";
 import {DogButton} from "../DogButton/DogButton";
 
 
 export const FormAdoption = () => {
+    const [loading, setLoading] = useState(false);
+    const [id, setId] = useState('');
 
     const [person, setPerson] = useState({
-        name: '',
+        firstAndLastName: '',
         email: '',
         phone: '',
     });
 
-    const sendForm = (e: SyntheticEvent) => {
+    const sendForm = async (e: SyntheticEvent) => {
         e.preventDefault();
 
         console.log(person);
 
+        setLoading(true);
+
+        try {
+            const res = await fetch("http://localhost:3001/adopt/", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ...person
+                }),
+            });
+            const personData= await res.json();
+            setId(personData.id);
+
+
+        } finally {
+            setLoading(false);
+        }
+
+    }
+
+
+    if (loading) {
+        return <h2>Proszę czekać...</h2>
+    }
+
+    if (id) {
+        return (
+            <>
+                <h2>{person.firstAndLastName}, dziękujemy, twoje dane zostały pomyślnie wysłane! Skontaktujemy się z Państwem jak najszybciej! </h2>
+                <DogButton to="/" text="Powrót do strony głównej"/>
+            </>
+        )
     }
 
 
     return (
-            <>
-                <form className="form-adopt" onSubmit={sendForm}>
+                <form onSubmit={sendForm} action="" className="form-adopt" >
                     <h2>Wypełnij formularz, a my się z Tobą skontaktujemy:</h2>
                     <p>
                         <label>
                             Imię i nazwisko: <br/>
                             <input
                                 type="text"
-                                name="name"
-                                value={person.name}
+                                name="firstAndLastName"
+                                value={person.firstAndLastName}
                                 required
                                 maxLength={200}
                                 onChange={e => setPerson(person => ({
                                     ...person,
-                                    name: e.target.value,
+                                    firstAndLastName: e.target.value,
                                 }))}
                             />
                         </label>
@@ -72,11 +106,9 @@ export const FormAdoption = () => {
                             />
                         </label>
                     </p>
-                    <DogButton text="ADOPTUJ!"/>
+                    <button type="submit" className="sub-button">Adoptuj!</button>
                 </form>
-            </>
 
         )
-
 
 }
