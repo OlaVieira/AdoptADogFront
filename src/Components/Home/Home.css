@@ -1,0 +1,40 @@
+.search-for-city {
+    margin: 15px 20px;
+    color: #074d7b;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.background {
+    margin: 5vh 10vw 10vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dog-box {
+    height: 340px;
+    width: 290px;
+    background-color: whitesmoke;
+    border-radius: 7px;
+    margin: 30px 15px 15px 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+img {
+    height: 100px;
+    width: 250px;
+}
+.dog-name, .dog-city {
+    width: 100%;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 15px;
+    color: #074d7b;
+    text-transform: uppercase;
+}
+.dog-city {
+    font-size: 1rem;
+}
