@@ -21,7 +21,7 @@ export const FormAdoption = () => {
         setLoading(true);
 
         try {
-            const res = await fetch("http://localhost:3001/adopt/", {
+            const res = await fetch("http://localhost:3001/adopters/add", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -40,6 +40,13 @@ export const FormAdoption = () => {
 
     }
 
+    const updatePerson = (key: string, value: any) => {
+        setPerson(person => ({
+            ...person,
+            [key]: value,
+        }));
+    };
+
 
     if (loading) {
         return <h2>Proszę czekać...</h2>
@@ -47,10 +54,10 @@ export const FormAdoption = () => {
 
     if (id) {
         return (
-            <>
+            <div className="thank-you-info">
                 <h2>{person.firstAndLastName}, dziękujemy, twoje dane zostały pomyślnie wysłane! Skontaktujemy się z Państwem jak najszybciej! </h2>
                 <DogButton to="/" text="Powrót do strony głównej"/>
-            </>
+            </div>
         )
     }
 
@@ -67,10 +74,7 @@ export const FormAdoption = () => {
                                 value={person.firstAndLastName}
                                 required
                                 maxLength={200}
-                                onChange={e => setPerson(person => ({
-                                    ...person,
-                                    firstAndLastName: e.target.value,
-                                }))}
+                                onChange={e => updatePerson('firstAndLastName', e.target.value)}
                             />
                         </label>
                     </p>
@@ -83,10 +87,7 @@ export const FormAdoption = () => {
                                 value={person.email}
                                 required
                                 maxLength={345}
-                                onChange={e => setPerson(person => ({
-                                    ...person,
-                                    email: e.target.value,
-                                }))}
+                                onChange={e => updatePerson('email', e.target.value)}
                             />
                         </label>
                     </p>
@@ -99,10 +100,7 @@ export const FormAdoption = () => {
                                 value={person.phone}
                                 required
                                 maxLength={9}
-                                onChange={e => setPerson(person => ({
-                                    ...person,
-                                    phone: e.target.value,
-                                }))}
+                                onChange={e => updatePerson('phone', e.target.value)}
                             />
                         </label>
                     </p>

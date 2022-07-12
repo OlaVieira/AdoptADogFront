@@ -1,6 +1,6 @@
 header {
-    height: 9vh;
-    min-height: 30px;
+    height: 55px;
+    min-height: 50px;
     background-color: #4890bf;
     color: whitesmoke;
     padding: 10px;
@@ -91,25 +91,27 @@ i {
         width: 30vw;
     }
     .search input {
-        width: 120px;
+        width: 100px;
     }
     .about, .contact {
         font-size: 11px;
     }
     header {
-        height: 11vh;
+        height: 55px;
     }
 }
 @media (max-width: 460px) {
     .title {
+        margin-left: 5px;
         font-size: 14px;
         width: 20vw;
     }
     .about, .contact {
+        margin-left: 5px;
         font-size: 10px;
     }
     .search input {
-        width: 60px;
+        width: 80px;
     }
 }
 
@@ -122,7 +124,27 @@ i {
         font-size: 8px;
     }
     .search input {
-        width: 50px;
+        width: 40px;
+    }
+
+}
+@media (max-width: 290px) {
+    .title {
+        font-size: 10px;
+        width: 80%;
+        margin-left: 5px;
+    }
+    .about, .contact {
+        font-size: 7px;
+        margin-left: 3px;
+    }
+    .search input {
+        width: 40px;
+    }
+    .search-button {
+        height: 90%;
+        width: 40%;
+        margin-right: 0px;
     }
 
 }
