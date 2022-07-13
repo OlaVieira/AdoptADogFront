@@ -11,6 +11,7 @@ export const FormAdoption = () => {
         firstAndLastName: '',
         email: '',
         phone: '',
+        wantedDogs: '',
     });
 
     const sendForm = async (e: SyntheticEvent) => {
@@ -100,10 +101,25 @@ export const FormAdoption = () => {
                                 value={person.phone}
                                 required
                                 maxLength={9}
+                                minLength={9}
                                 onChange={e => updatePerson('phone', e.target.value)}
                             />
                         </label>
                     </p>
+                    <p>
+                         <label>
+                             Imię psa bądź imiona psów, które chcesz adoptować: <br/>
+                             <input
+                                 type="text"
+                                 name="wantedDogs"
+                                 value={person.wantedDogs}
+                                 required
+                                 maxLength={50}
+                                 onChange={e => updatePerson('wantedDogs', e.target.value)}
+                             />
+                         </label>
+                    </p>
+
                     <button type="submit" className="sub-button">Adoptuj!</button>
                 </form>
 

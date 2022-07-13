@@ -24,6 +24,8 @@ export const Shelters = () => {
                         <div key={shelter.id} className="shelter-box">
                             <p>Nazwa schroniska:</p>
                             <p className="shelter-name">{shelter.name}</p>
+                            <p>Id schroniska:</p>
+                            <p className="shelter-id">{shelter.id}</p>
                             <p>Więcej informacji:</p>
                             <DogButton to={`/shelters/${shelter.id}`} text={shelter.name}/>
                         </div>

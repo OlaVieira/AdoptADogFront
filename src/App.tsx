@@ -13,7 +13,8 @@ import {Shelters} from "./Components/Shelters/Shelters";
 import {ShelterInfo} from "./Components/ShelterInfo/ShelterInfo";
 
 export const App = () => {
-    const [searchCity, setSearchCity] = useState('');  //stan lokalny ktory jest stringiem bedzie w innych miejscach w kontekscie wykorzystywany
+    const [searchCity, setSearchCity] = useState('');
+    //stan lokalny ktory jest stringiem bedzie w innych miejscach w kontekscie wykorzystywany
 
     return (
       <SearchContext.Provider value={{searchCity, setSearchCity}}>
