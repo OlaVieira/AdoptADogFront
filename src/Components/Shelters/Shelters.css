@@ -1,0 +1,25 @@
+.background {
+    margin: 20px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.background-title {
+    margin: 30px 20px;
+    width: 100vw;
+}
+
+.shelter-box {
+    background-color: #eeeaea;
+    margin: 25px 15px;
+    padding: 30px 25px;
+    border-radius: 5px;
+}
+p {
+    margin: 5px 0 15px 0;
+}
+.shelter-name{
+    font-weight: bold;
+    font-size: 20px;
+}

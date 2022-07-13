@@ -35,7 +35,8 @@ export const Header = () => {
             </Link>
 
 
-            <form className="search" onSubmit={setSearchLocState}>
+            <form className="search"
+                  onSubmit={setSearchLocState}>
                 <input
                     type="text"
                     placeholder="Wpisz miasto..."
@@ -46,5 +47,5 @@ export const Header = () => {
             </form>
 
         </header>
-    )
-}
+    );
+};

@@ -9,13 +9,20 @@ export const About = () => {
             <div className="about-description">
                 <p>Jesteśmy firmą, która współpracuje z wieloma schroniskami z całej Polski.</p>
                 <br/>
-                <p>Jeśli masz ochotę adoptować pieska, tutaj znajdziesz ogłoszenia, które mogą Cię zainteresować</p>
-                <p>Wybierz pieska, który Ci się podoba i wyślij formularz, a my się odezwiemy</p>
+                <DogButton text="Zobacz schroniska" to="/shelters"/>
+                <br/>
+                <br/>
+                <p>Jeśli masz ochotę adoptować pieska, tutaj znajdziesz ogłoszenia, które mogą Cię zainteresować.</p>
+                <p>Wybierz pieska, który Ci się podoba i wyślij formularz, a my się odezwiemy.</p>
                 <br/>
                 <p>Zawsze możesz skontaktować się z nami osobiście:</p>
             </div>
+            <div className="about-buttons">
+                <DogButton to="/contact" text="Kontakt"/>
+                <p>Jeśli masz psa do oddania, skontaktuj się z nami lub wypełnij ten formularz:</p>
+                <DogButton text="Dodaj psa do adopcji" to="/dog/add"/>
+            </div>
 
-            <DogButton to="/contact" text="Kontakt"/>
         </div>
     )
 }

@@ -16,8 +16,10 @@ export const Home = () => {
         })();
     }, []);
 
+
     return (
             <div className="background">
+
                 {
                     dogs.map(dog => (
                         <div key={dog.id} className="dog-box">
@@ -29,5 +31,8 @@ export const Home = () => {
                     ))
                 }
             </div>
+
     )
+
+
 }
