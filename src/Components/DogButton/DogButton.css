@@ -16,3 +16,10 @@
     cursor: pointer;
     background-color: #074d7b;
 }
+
+@media (max-width: 430px) {
+    .button, .btn {
+        font-size: 17px;
+    }
+
+}

@@ -1,36 +1,44 @@
 .dog-info {
     width: 100%;
-    height: 80vh;
-    margin: 5vh 20px 0 0;
+    height: 90vh;
+    margin: 20px 20px 0 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
+.img-dog {
+    max-height: 380px;
+    margin-left: 20px;
+}
+
 .info {
     width: 50vw;
+    margin-left: 20px;
 }
+
+
+.owner-phone {
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
 
 .dog-name {
     width: 100%;
     font-size: 1.5rem;
     text-align: center;
-    padding: 20px 0 20px;
+    padding: 10px 0 10px;
     color: #074d7b;
     text-transform: uppercase;
 }
 
-img {
-    height: 50vh;
-    width: 40%;
-    margin-left: 20px;
-}
 
 .description {
     margin: 20px 0 20px 0;
     color: #074d7b;
     font-size: 1.2rem;
-    width: 45vw;
+    padding-right: 10px;
 }
 
 .dog-city {
@@ -38,48 +46,72 @@ img {
     font-size: 1.1rem;
 }
 
-@media (max-width: 1024px) {
-    img {
-        height: 220px;
+@media (max-width: 1800px) {
+    .img-dog {
+        height: 330px;
+    }
+    .info {
+        width: 30vw;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .img-dog {
+        height: 290px;
     }
 }
 
-@media (max-width: 800px) {
-    img {
-        height: 200px;
+@media (max-width: 1060px) {
+    .img-dog {
+        height: 240px;
     }
     .description {
         font-size: 1rem;
     }
 }
 
-@media (max-width: 600px) {
-    img {
-        height: 150px;
+@media (max-width: 890px) {
+    .img-dog {
+        height: 180px;
     }
-
-    .description {
+    .description, .shelter-id, .owner-phone {
         font-size: 0.9rem;
-        width: 90vw;
-    }
-
-    .shelter-id {
-        width: 90vw;
+        width: 320px;
     }
 
 }
 
-@media (max-width: 300px) {
-    img {
-        height: 120px;
+@media (max-width: 700px) {
+    .img-dog {
+        height: 160px;
     }
-    .description {
-        font-size: 0.7rem;
+
+    .description, .shelter-id, .owner-phone {
+        font-size: 0.8rem;
+        width: 290px;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+    .img-dog {
         width: 90vw;
+        height: 100%;
+    }
+    .description, .shelter-id, .owner-phone  {
+        font-size: 0.8rem;
+        width: 90vw;
+        padding-right: 10px;
     }
     .shelter-id {
         width: 90vw;
     }
+    .buttons-dog-info {
+        width: 80vw;
+    }
 
 }
+
 

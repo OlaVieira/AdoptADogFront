@@ -25,15 +25,22 @@ export const DogInfo = () => {
         <>
             <div className="dog-info">
                 <p className="dog-name">{dog.name}</p>
-                <img src="https://cdn.pixabay.com/photo/2019/01/05/14/54/dog-3915191_960_720.jpg" alt="dog"/>
+                <div className="box-img">
+                    <img className="img-dog" src="https://cdn.pixabay.com/photo/2019/01/05/14/54/dog-3915191_960_720.jpg" alt="dog"/>
+                </div>
+
                 <div className="info">
                     <p className="description">{dog.description}</p>
                     <p className="dog-city">Miasto: {dog.city}</p>
                     <p className="shelter-id">Id schroniska: {dog.shelterId}</p>
-                    <DogButton to="/adopter/add" text="ADOPTUJ MNIE!"/>
-                    <br/>
-                    <br/>
-                    <DogButton text="Zobacz schroniska" to="/shelters"/>
+                    <p className="owner-phone">Telefon do właściciela: {dog.phone}</p>
+                    <div className="buttons-dog-info">
+                        <DogButton to="/adopter/add" text="ADOPTUJ MNIE!"/>
+                        <br/>
+                        <br/>
+                        <DogButton text="Zobacz schroniska" to="/shelters"/>
+                    </div>
+
                 </div>
 
             </div>
