@@ -12,6 +12,8 @@ import {FormAddDogForAdoption} from "./Components/FormAddDogForAdoption/FormAddD
 import {Shelters} from "./Components/Shelters/Shelters";
 import {ShelterInfo} from "./Components/ShelterInfo/ShelterInfo";
 
+
+
 export const App = () => {
     const [searchCity, setSearchCity] = useState('');
     //stan lokalny ktory jest stringiem bedzie w innych miejscach w kontekscie wykorzystywany
@@ -28,11 +30,9 @@ export const App = () => {
               <Route path="/shelters/:id" element={<ShelterInfo/>}/>
               <Route path="/adopter/add" element={<FormAdoption/>}/>
               <Route path="/dog/add" element={<FormAddDogForAdoption/>}/>
-
           </Routes>
       </SearchContext.Provider>
 
-
   );
-}
+};
 

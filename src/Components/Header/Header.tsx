@@ -34,14 +34,13 @@ export const Header = () => {
                 </div>
             </Link>
 
-
             <form className="search"
                   onSubmit={setSearchLocState}>
                 <input
                     type="text"
                     placeholder="Wpisz miasto..."
                     value={valueFromInput}
-                    onChange={event => setValueFromInput(event.target.value)}
+                    onChange={e => setValueFromInput(e.target.value)}
                 />
                 <button className="search-button"><i className="fa-solid fa-magnifying-glass"></i></button>
             </form>
