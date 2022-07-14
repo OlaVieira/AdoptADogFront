@@ -10,14 +10,6 @@ export const Home = () => {
     const [dogs, setDogs] = useState<LittleDogInfoEntity[]>([]);
 
 
-    // useEffect(() => {
-    //     (async () =>{
-    //         const res = await fetch(`http://localhost:3001/dogs/`);
-    //         const data = await res.json();
-    //         setDogs(data);
-    //     })();
-    // }, []);
-
     useEffect(() => {
         (async () =>{
             const res = await fetch(`http://localhost:3001/dogs/search/${searchCity}`);

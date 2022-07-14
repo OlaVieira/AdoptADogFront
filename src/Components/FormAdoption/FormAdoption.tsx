@@ -17,6 +17,7 @@ export const FormAdoption = () => {
     const sendForm = async (e: SyntheticEvent) => {
         e.preventDefault();
 
+        //zostawiam cconsole log do sprawdzenia, potem usunac
         console.log(person);
 
         setLoading(true);

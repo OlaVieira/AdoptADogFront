@@ -16,6 +16,7 @@ export const FormAddDogForAdoption = () => {
     const sendForm = async (e: SyntheticEvent) => {
         e.preventDefault();
 
+        //zostawiam cconsole log do sprawdzenia, potem usunac
         console.log(dog);
 
         setLoading(true);
