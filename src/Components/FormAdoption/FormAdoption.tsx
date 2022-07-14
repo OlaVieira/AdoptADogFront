@@ -96,7 +96,7 @@ export const FormAdoption = () => {
                         <label>
                             Telefon: <br/>
                             <input
-                                type="tel"
+                                type="text"
                                 name="phone"
                                 value={person.phone}
                                 required

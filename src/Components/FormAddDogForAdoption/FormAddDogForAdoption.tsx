@@ -108,7 +108,7 @@ export const FormAddDogForAdoption = () => {
                 <label>
                     Telefon kontaktowy: <br/>
                     <input
-                        type="tel"
+                        type="text"
                         name="phone"
                         value={dog.phone}
                         required
